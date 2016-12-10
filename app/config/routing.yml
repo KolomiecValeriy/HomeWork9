@@ -1,3 +1,7 @@
+kolomiets_home_work9:
+    resource: "@KolomietsHomeWork9Bundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

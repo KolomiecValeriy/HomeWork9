@@ -1,0 +1,3 @@
+kolomiets_home_work9_homepage:
+    path:     /
+    defaults: { _controller: KolomietsHomeWork9Bundle:Default:index }

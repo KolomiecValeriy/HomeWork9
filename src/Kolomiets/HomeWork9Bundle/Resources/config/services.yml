@@ -1,0 +1,4 @@
+services:
+#    kolomiets_home_work9.example:
+#        class: Kolomiets\HomeWork9Bundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
