@@ -12,10 +12,18 @@ class CategoryGroupRepository extends \Doctrine\ORM\EntityRepository
      */
     public function findAllOrderedByName()
     {
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT cg FROM KolomietsHomeWork9Bundle:CategoryGroup cg ORDER BY cg.name ASC'
-            )
-            ->getResult();
+//        $repository = $this->_em->getRepository('KolomietsHomeWork9Bundle:CategoryGroup');
+
+        $query = $this->_em->createQueryBuilder('cg')
+            ->from('KolomietsHomeWork9Bundle:CategoryGroup')
+            ->orderBy('cg.name', 'ASC')
+            ->getQuery();
+
+        return $query->getResult();
+//        return $this->getEntityManager()
+//            ->createQuery(
+//                'SELECT cg FROM KolomietsHomeWork9Bundle:CategoryGroup cg ORDER BY cg.name ASC'
+//            )
+//            ->getResult();
     }
 }

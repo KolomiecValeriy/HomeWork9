@@ -12,7 +12,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $categoryGroup = $em->getRepository('KolomietsHomeWork9Bundle:Category')->findOneByIdJoinedCategoryGroup(3);
+        $categoryGroup = $em->getRepository('KolomietsHomeWork9Bundle:CategoryGroup')->findAllOrderedByName();
 
         return $this->render('KolomietsHomeWork9Bundle:Default:index.html.twig',
             array(
