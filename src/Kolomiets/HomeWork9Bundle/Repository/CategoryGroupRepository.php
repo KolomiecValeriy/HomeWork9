@@ -15,7 +15,6 @@ class CategoryGroupRepository extends \Doctrine\ORM\EntityRepository
 //        $repository = $this->_em->getRepository('KolomietsHomeWork9Bundle:CategoryGroup');
 
         $query = $this->createQueryBuilder('cg')
-            ->from('KolomietsHomeWork9Bundle:CategoryGroup')
             ->orderBy('cg.name', 'ASC')
             ->getQuery();
 
