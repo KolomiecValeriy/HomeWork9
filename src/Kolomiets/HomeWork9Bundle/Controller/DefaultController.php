@@ -6,8 +6,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function indexAction()
     {
-        return $this->render('KolomietsHomeWork9Bundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $categoryGroup = $em->getRepository('KolomietsHomeWork9Bundle:Category')->findOneByIdJoinedCategoryGroup(3);
+
+        return $this->render('KolomietsHomeWork9Bundle:Default:index.html.twig',
+            array(
+                'categorygroup' => $categoryGroup,
+            )
+        );
     }
 }

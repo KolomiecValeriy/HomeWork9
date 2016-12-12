@@ -1,1 +1,6 @@
-Hello World!
+<h2>Category Groups</h2>
+<ul>
+    {% for cgroup in categorygroup %}
+        <li>{{ cgroup.name }}</li>
+    {% endfor %}
+</ul>
